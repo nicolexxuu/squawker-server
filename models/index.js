@@ -6,7 +6,7 @@ mongoose.Promise = Promise;
 // mongoose.connect("mongodb://127.0.0.1/warbler", {
 //     keepAlive: true,
 // })
-mongoose.connect("mongodb+srv://nicolexxuu:ktnx2929!@cluster0.iqhnbmi.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://nicolexxuu:ktnx2929@cluster0.iqhnbmi.mongodb.net/?retryWrites=true&w=majority", {
     keepAlive: true,
 })
 
