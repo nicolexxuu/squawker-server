@@ -43,6 +43,6 @@ app.use(function (req, res, next) {
 
 app.use(errorHandler);
 
-app.listen(PORT, function () {
-    console.log(`Server is starting on port ${PORT}`)
+app.listen(process.env.PORT || PORT, function () {
+    // console.log(`Server is starting on port ${PORT}`)
 })
