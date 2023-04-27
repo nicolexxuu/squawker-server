@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 exports.signin = async function (req, res, next) {
     try {
         let user = await db.User.findOne({
-            email: req.body.email
+            email: req.body.email.toLowerCase()
         });
         let { id, username, profileImageUrl } = user;
         let isMatch = await user.comparePassword(req.body.password);
