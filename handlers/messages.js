@@ -40,3 +40,17 @@ exports.deleteMessage = async function (req, res, next) {
         return next(err);
     }
 };
+
+exports.editMessage = async function (req, res, next) {
+    try {
+        let foundMessage = await db.Message.findById(req.params.message_id);
+        foundMessage.text = req.body.text;
+        foundMessage.imageUrl = req.body.url;
+        await foundMessage.save();
+        return res.status(200).json(foundMessage);
+    } catch (err) {
+        return next(err);
+    }
+};
+
+
